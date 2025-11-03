@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Domingos - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="particles-background"></div> <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Portfólio</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Início</a>
+                <a href="certificados.html">Certificados e Cursos</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="fade-in">
+        <div class="container hero-content">
+            <div class="hero-avatar">
+                <div class="avatar-border">
+                    <img src="perfil/perfil1.jpeg" alt="Pedro Henrique Domingos" class="avatar-img">
+                </div>
+            </div>
+            <div class="hero-text">
+                <span class="greeting">Não sei oq colocar aqui</span>
+                <span class="year-badge">2025</span>
+                <h1>Pedro Henrique Domingos</h1>
+                <p>Eu sou <span id="typed-text"></span><span class="cursor">|</span></p>
+                <div class="hero-botoes">
+                    <a href="assets/Pedro CV06.pdf" download class="btn btn-primary">Baixar meu CV</a>
+                    <a href="#projetos" class="btn btn-secondary">Ver Projetos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="scroll-animate">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <p>Olá! Sou Pedro, um estudante de Engenharia de Software e Técnico em Informática apaixonado por tecnologia e pronto para meu primeiro desafio profissional na área de T.I..</p>
+                    <p>Meu objetivo é me juntar a uma startup ou empresa de tecnologia onde eu possa aplicar meu conhecimento, aprender rapidamente e contribuir para projetos inovadores.</p>
+                    <p>Com uma formação que também inclui um Técnico em Administração, trago uma visão organizada e analítica, entendendo não só o código, mas como a tecnologia resolve problemas de negócio. Estou constantemente me atualizando, com foco recente em Fundamentos de Python e Programação com IA Generativa pelo Senai.</p>
+                </div>
+                <div class="sobre-habilidades">
+                    <h3>Habilidades Chave</h3>
+                    <ul>
+                        <li>Python </li>
+                        <li>SQL </li>
+                        <li>VBA </li>
+                        <li> C </li>
+                        <li> JS </li>
+                        <li>Conceitos de IA Generativa</li>
+                        <li>Git e VS Code</li>
+                        <li>Hardware e Software</li>
+                        <li>Familiaridade com Windows</li>
+                        <li>Pacote Office</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="scroll-animate">
+        <div class="container">
+            <h2>Meus Trabalhos</h2>
+            <p class="subtitulo-secao">Como estudante, estou focado em construir projetos práticos para aplicar o que aprendo na faculdade e nos cursos técnicos. Abaixo estão alguns dos trabalhos que desenvolvi:</p>
+            
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <h3>[axii (mais pra frente eu coloco )]</h3>
+                    <p>axii.</p>
+                    <p><strong>Tecnologias:</strong> </p>
+                    <div class="projeto-botoes">
+                        <a href="#" class="btn-projeto">Ver no GitHub</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <h3>[não sei]</h3>
+                    <p>não sei</p>
+                    <p><strong>Tecnologias:</strong> não sei</p>
+                    <div class="projeto-botoes">
+                        <a href="#" class="btn-projeto">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="scroll-animate">
+        <div class="container">
+            <h2>Vamos Conversar?</h2>
+            <p>Estou buscando ativamente minha primeira oportunidade (estágio, trainee ou júnior) em empresas de tecnologia e startups.</p>
+            <p>Se você acredita que meu perfil se encaixa na sua equipe, vamos nos conectar!</p>
+            
+            <ul class="contato-lista">
+                <li><a href="mailto:Pedrod07122005@gmail.com">E-mail: Pedrod07122005@gmail.com</a></li>
+                <li><a href="http://www.linkedin.com/in/pedro-henrique-domingos-386ab0237" target="_blank">LinkedIn</a></li>
+                <li>Localização: Ribeirão Pires-SP</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pedro Henrique Domingos. Feito com HTML, CSS e GitHub Pages.</p>
+    </footer>
+
+    <script>
+        
+        const typedTextSpan = document.getElementById("typed-text");
+        const textArray = ["um Estudante de Engenharia de Software.", "um Desenvolvedor em Formação.", "Nascido e criado no python"];
+        const typingDelay = 100;
+        const erasingDelay = 50;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                if(!typedTextSpan.classList.contains("typing")) typedTextSpan.classList.add("typing");
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                typedTextSpan.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                if(!typedTextSpan.classList.contains("typing")) typedTextSpan.classList.add("typing");
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } else {
+                typedTextSpan.classList.remove("typing");
+                textArrayIndex++;
+                if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if(textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+
+        
+        const scrollAnimateElements = document.querySelectorAll('.scroll-animate');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        scrollAnimateElements.forEach(el => observer.observe(el));
+
+        
+        const heroSection = document.getElementById('hero');
+        heroSection.classList.add('visible');
+    </script>
+</body>
+</html>
