@@ -99,7 +99,7 @@ export default function Contato() {
               className={`w-full py-4 rounded-lg font-semibold text-white transition duration-300 
                 ${isSending ? 'bg-gray-600 cursor-not-allowed' : 'bg-purpleAccent shadow-[0_0_20px_rgba(138,43,226,0.6)] hover:shadow-[0_0_40px_rgba(138,43,226,1)]'}`}
             >
-              {isSending ? "Enviando..." : "Enviar Mensagem 🚀"}
+              {isSending ? "Enviando..." : "Enviar Mensagem "}
             </button>
 
             {/* Mensagem de Feedback */}
