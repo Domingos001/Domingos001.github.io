@@ -73,7 +73,7 @@ export default function Certificados() {
         </h1>
 
         <p className="text-textMedium text-center mb-12">
-          Minha evolução ao longo do tempo 🚀
+          Minha evolução ao longo do tempo
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -130,7 +130,7 @@ export default function Certificados() {
                   <a
                     href={cert.link}
                     target="_blank"
-                    className="mt-auto text-center px-4 py-2 rounded-lg 
+                    className="mt-auto text-center px-4 py-2 rounded-lg
                     bg-blueAccent text-white font-semibold
                     hover:shadow-[0_0_20px_#4682b4]
                     transition"
