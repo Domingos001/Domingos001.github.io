@@ -36,9 +36,9 @@ export default function Certificados() {
     {
       nome: "Banco de Dados para WEB",
       instituicao: "SENAC SP",
-      inicio: "2026-01-10",
-      fim: "2026-06-15",
-      tipo: "andamento"
+      status: "Concluído (2026)",
+      link: "/img/Certificado_Fundamentos do Python.pdf",
+      tipo: "concluido"
     },
     {
       nome: "Programação com IA Generativa",
