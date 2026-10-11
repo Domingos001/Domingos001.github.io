@@ -37,7 +37,7 @@ export default function Certificados() {
       nome: "Banco de Dados para WEB",
       instituicao: "SENAC SP",
       status: "Concluído (2026)",
-      link: "/img/Certificado_Fundamentos do Python.pdf",
+      link: "/img/Certificado_Certificado_Banco_de_dados",
       tipo: "concluido"
     },
     {
